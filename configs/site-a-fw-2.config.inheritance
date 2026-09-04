@@ -1,0 +1,233 @@
+## Last commit: 2026-08-13 19:02:27 UTC by root
+version 20190319.203446_builder.r1013243;
+system {
+    root-authentication {
+        encrypted-password "$6$47kKCfWI$TPojoQomyQrRg/4xT/4jXy86uWXIyVElO1ZDE4xv9lmyMFRvg1DJ17qtC/Wx1U7F7WDUoM3Pc9fN3QPbQUPUk/"; ## SECRET-DATA
+    }
+    services {
+        ssh {
+            root-login allow;
+        }
+        web-management {
+            http {
+                interface fxp0.0;
+            }
+        }
+    }
+    ##
+    ## 'site-a-fw-2' was inherited from group 'node1'
+    ##
+    host-name site-a-fw-2;
+    syslog {
+        user * {
+            any emergency;
+        }
+        file messages {
+            any any;
+            authorization info;
+        }
+        file interactive-commands {
+            interactive-commands any;
+        }
+    }
+    license {
+        autoupdate {
+            url https://ae1.juniper.net/junos/key_retrieval;
+        }
+    }
+}
+security {
+    screen {
+        ids-option untrust-screen {
+            icmp {
+                ping-death;
+            }
+            ip {
+                source-route-option;
+                tear-drop;
+            }
+            tcp {
+                syn-flood {
+                    alarm-threshold 1024;
+                    attack-threshold 200;
+                    source-threshold 1024;
+                    destination-threshold 2048;
+                    queue-size 2000; ## Warning: 'queue-size' is deprecated
+                    timeout 20;
+                }
+                land;
+            }
+        }
+    }
+    policies {
+        from-zone trust to-zone trust {
+            policy default-permit {
+                match {
+                    source-address any;
+                    destination-address any;
+                    application any;
+                }
+                then {
+                    permit;
+                }
+            }
+        }
+        from-zone trust to-zone untrust {
+            policy default-permit {
+                match {
+                    source-address any;
+                    destination-address any;
+                    application any;
+                }
+                then {
+                    permit;
+                }
+            }
+        }
+        from-zone WAN to-zone LAN {
+            policy DEFAULT {
+                match {
+                    source-address any;
+                    destination-address any;
+                    application any;
+                }
+                then {
+                    deny;
+                }
+            }
+        }
+        from-zone LAN to-zone WAN {
+            policy DEFAULT {
+                match {
+                    source-address any;
+                    destination-address any;
+                    application any;
+                }
+                then {
+                    permit;
+                }
+            }
+        }
+    }
+    zones {
+        security-zone trust {
+            tcp-rst;
+        }
+        security-zone untrust {
+            screen untrust-screen;
+        }
+        security-zone WAN {
+            host-inbound-traffic {
+                system-services {
+                    all;
+                }
+                protocols {
+                    all;
+                }
+            }
+            interfaces {
+                ge-0/0/1.0;
+                ge-7/0/1.0;
+            }
+        }
+        security-zone LAN {
+            host-inbound-traffic {
+                system-services {
+                    all;
+                }
+                protocols {
+                    all;
+                }
+            }
+            interfaces {
+                ge-0/0/2.0;
+                ge-7/0/2.0;
+            }
+        }
+    }
+}
+interfaces {
+    ge-0/0/1 {
+        description to_site-a-br-1_ge-0/0/3;
+        unit 0 {
+            family inet {
+                address 172.16.1.2/30;
+            }
+        }
+    }
+    ge-0/0/2 {
+        description to_site-a-cr-1_ge-0/0/0;
+        unit 0 {
+            family inet {
+                address 192.168.1.1/30;
+            }
+        }
+    }
+    ge-7/0/1 {
+        description to_site-a-br-2_ge-0/0/3;
+        unit 0 {
+            family inet {
+                address 172.16.2.2/30;
+            }
+        }
+    }
+    ge-7/0/2 {
+        description to_site-a-cr-2_ge-0/0/0;
+        unit 0 {
+            family inet {
+                address 192.168.2.1/30;
+            }
+        }
+    }
+    fab0 {
+        fabric-options {
+            member-interfaces {
+                ge-0/0/0;
+            }
+        }
+    }
+    fab1 {
+        fabric-options {
+            member-interfaces {
+                ge-7/0/0;
+            }
+        }
+    }
+    ##
+    ## 'fxp0' was inherited from group 'node1'
+    ##
+    fxp0 {
+        ##
+        ## '0' was inherited from group 'node1'
+        ##
+        unit 0 {
+            ##
+            ## 'inet' was inherited from group 'node1'
+            ##
+            family inet {
+                ##
+                ## '192.168.23.114/24' was inherited from group 'node1'
+                ##
+                address 192.168.23.114/24;
+            }
+        }
+    }
+}
+protocols {
+    ospf {
+        area 0.0.0.10 {
+            interface ge-0/0/1.0 {
+                interface-type p2p;
+            }
+            interface ge-0/0/2.0 {
+                interface-type p2p;
+            }
+            interface ge-7/0/1.0 {
+                interface-type p2p;
+            }
+            interface ge-7/0/2.0 {
+                interface-type p2p;
+            }
+        }
+    }
+}
