@@ -1,0 +1,84 @@
+{
+  "edges": [
+    {
+      "node1": {
+        "hostname": "site-a-br-1",
+        "interfaceName": "ge-0/0/2"
+      },
+      "node2": {
+        "hostname": "site-a-br-2",
+        "interfaceName": "ge-0/0/2"
+      }
+    },
+    {
+      "node1": {
+        "hostname": "site-a-br-2",
+        "interfaceName": "ge-0/0/2"
+      },
+      "node2": {
+        "hostname": "site-a-br-1",
+        "interfaceName": "ge-0/0/2"
+      }
+    },
+    {
+      "node1": {
+        "hostname": "site-a-br-1",
+        "interfaceName": "ge-0/0/3"
+      },
+      "node2": {
+        "hostname": "site-a-fw-1",
+        "interfaceName": "ge-0/0/1"
+      }
+    },
+    {
+      "node1": {
+        "hostname": "site-a-fw-1",
+        "interfaceName": "ge-0/0/1"
+      },
+      "node2": {
+        "hostname": "site-a-br-1",
+        "interfaceName": "ge-0/0/3"
+      }
+    },
+    {
+      "node1": {
+        "hostname": "site-a-br-2",
+        "interfaceName": "ge-0/0/3"
+      },
+      "node2": {
+        "hostname": "site-a-fw-1",
+        "interfaceName": "ge-7/0/1"
+      }
+    },
+    {
+      "node1": {
+        "hostname": "site-a-fw-1",
+        "interfaceName": "ge-7/0/1"
+      },
+      "node2": {
+        "hostname": "site-a-br-2",
+        "interfaceName": "ge-0/0/3"
+      }
+    },
+    {
+      "node1": {
+        "hostname": "site-a-fw-1",
+        "interfaceName": "fab0"
+      },
+      "node2": {
+        "hostname": "site-a-fw-1",
+        "interfaceName": "fab1"
+      }
+    },
+    {
+      "node1": {
+        "hostname": "site-a-fw-1",
+        "interfaceName": "fab1"
+      },
+      "node2": {
+        "hostname": "site-a-fw-1",
+        "interfaceName": "fab0"
+      }
+    }
+  ]
+}
