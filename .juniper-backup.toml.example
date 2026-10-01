@@ -1,0 +1,23 @@
+# Copy this file to .juniper-backup.toml. Do not commit the copied file.
+[backup]
+# Relative paths are resolved from the directory where the script is run.
+output_dir = "backups"
+
+[[devices]]
+name = "site-a-fw-1"
+# Use the same address or host name that is registered in your SSH known_hosts file.
+host = "192.0.2.10"
+port = 22
+username = "backup-user"
+password = "replace-with-a-secret"
+timeout_seconds = 30
+filename = "site-a-fw-1.config.inheritance"
+
+[[devices]]
+name = "site-a-fw-2"
+host = "192.0.2.11"
+port = 22
+username = "backup-user"
+password = "replace-with-a-secret"
+timeout_seconds = 30
+filename = "site-a-fw-2.config.inheritance"

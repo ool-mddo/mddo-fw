@@ -1,0 +1,9 @@
+# Secret SSH connection settings
+.juniper-backup.toml
+
+# Retrieved Junos configurations can contain secret data.
+backups/
+
+# Python-generated files
+__pycache__/
+*.py[cod]
