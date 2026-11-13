@@ -539,6 +539,366 @@
         "hostname": "site-b-br-1",
         "interfaceName": "ge-0/0/1"
       }
+    },
+    {
+      "node1": {
+        "hostname": "site-a-cr-1",
+        "interfaceName": "ge-0/0/2"
+      },
+      "node2": {
+        "hostname": "site-a-seg1",
+        "interfaceName": "GigabitEthernet0/1"
+      }
+    },
+    {
+      "node1": {
+        "hostname": "site-a-seg1",
+        "interfaceName": "GigabitEthernet0/1"
+      },
+      "node2": {
+        "hostname": "site-a-cr-1",
+        "interfaceName": "ge-0/0/2"
+      }
+    },
+    {
+      "node1": {
+        "hostname": "site-a-cr-2",
+        "interfaceName": "ge-0/0/2"
+      },
+      "node2": {
+        "hostname": "site-a-seg1",
+        "interfaceName": "GigabitEthernet0/2"
+      }
+    },
+    {
+      "node1": {
+        "hostname": "site-a-seg1",
+        "interfaceName": "GigabitEthernet0/2"
+      },
+      "node2": {
+        "hostname": "site-a-cr-2",
+        "interfaceName": "ge-0/0/2"
+      }
+    },
+    {
+      "node1": {
+        "hostname": "site-a-host-1",
+        "interfaceName": "eth0"
+      },
+      "node2": {
+        "hostname": "site-a-seg1",
+        "interfaceName": "GigabitEthernet0/3"
+      }
+    },
+    {
+      "node1": {
+        "hostname": "site-a-seg1",
+        "interfaceName": "GigabitEthernet0/3"
+      },
+      "node2": {
+        "hostname": "site-a-host-1",
+        "interfaceName": "eth0"
+      }
+    },
+    {
+      "node1": {
+        "hostname": "site-a-cr-1",
+        "interfaceName": "ge-0/0/3"
+      },
+      "node2": {
+        "hostname": "site-a-seg2",
+        "interfaceName": "GigabitEthernet0/1"
+      }
+    },
+    {
+      "node1": {
+        "hostname": "site-a-seg2",
+        "interfaceName": "GigabitEthernet0/1"
+      },
+      "node2": {
+        "hostname": "site-a-cr-1",
+        "interfaceName": "ge-0/0/3"
+      }
+    },
+    {
+      "node1": {
+        "hostname": "site-a-cr-2",
+        "interfaceName": "ge-0/0/3"
+      },
+      "node2": {
+        "hostname": "site-a-seg2",
+        "interfaceName": "GigabitEthernet0/2"
+      }
+    },
+    {
+      "node1": {
+        "hostname": "site-a-seg2",
+        "interfaceName": "GigabitEthernet0/2"
+      },
+      "node2": {
+        "hostname": "site-a-cr-2",
+        "interfaceName": "ge-0/0/3"
+      }
+    },
+    {
+      "node1": {
+        "hostname": "site-a-host-2",
+        "interfaceName": "eth0"
+      },
+      "node2": {
+        "hostname": "site-a-seg2",
+        "interfaceName": "GigabitEthernet0/3"
+      }
+    },
+    {
+      "node1": {
+        "hostname": "site-a-seg2",
+        "interfaceName": "GigabitEthernet0/3"
+      },
+      "node2": {
+        "hostname": "site-a-host-2",
+        "interfaceName": "eth0"
+      }
+    },
+    {
+      "node1": {
+        "hostname": "site-b-cr-1",
+        "interfaceName": "ge-0/0/2"
+      },
+      "node2": {
+        "hostname": "site-b-seg1",
+        "interfaceName": "GigabitEthernet0/1"
+      }
+    },
+    {
+      "node1": {
+        "hostname": "site-b-seg1",
+        "interfaceName": "GigabitEthernet0/1"
+      },
+      "node2": {
+        "hostname": "site-b-cr-1",
+        "interfaceName": "ge-0/0/2"
+      }
+    },
+    {
+      "node1": {
+        "hostname": "site-b-cr-2",
+        "interfaceName": "ge-0/0/2"
+      },
+      "node2": {
+        "hostname": "site-b-seg1",
+        "interfaceName": "GigabitEthernet0/2"
+      }
+    },
+    {
+      "node1": {
+        "hostname": "site-b-seg1",
+        "interfaceName": "GigabitEthernet0/2"
+      },
+      "node2": {
+        "hostname": "site-b-cr-2",
+        "interfaceName": "ge-0/0/2"
+      }
+    },
+    {
+      "node1": {
+        "hostname": "site-b-host-1",
+        "interfaceName": "eth0"
+      },
+      "node2": {
+        "hostname": "site-b-seg1",
+        "interfaceName": "GigabitEthernet0/3"
+      }
+    },
+    {
+      "node1": {
+        "hostname": "site-b-seg1",
+        "interfaceName": "GigabitEthernet0/3"
+      },
+      "node2": {
+        "hostname": "site-b-host-1",
+        "interfaceName": "eth0"
+      }
+    },
+    {
+      "node1": {
+        "hostname": "site-b-cr-1",
+        "interfaceName": "ge-0/0/3"
+      },
+      "node2": {
+        "hostname": "site-b-seg2",
+        "interfaceName": "GigabitEthernet0/1"
+      }
+    },
+    {
+      "node1": {
+        "hostname": "site-b-seg2",
+        "interfaceName": "GigabitEthernet0/1"
+      },
+      "node2": {
+        "hostname": "site-b-cr-1",
+        "interfaceName": "ge-0/0/3"
+      }
+    },
+    {
+      "node1": {
+        "hostname": "site-b-cr-2",
+        "interfaceName": "ge-0/0/3"
+      },
+      "node2": {
+        "hostname": "site-b-seg2",
+        "interfaceName": "GigabitEthernet0/2"
+      }
+    },
+    {
+      "node1": {
+        "hostname": "site-b-seg2",
+        "interfaceName": "GigabitEthernet0/2"
+      },
+      "node2": {
+        "hostname": "site-b-cr-2",
+        "interfaceName": "ge-0/0/3"
+      }
+    },
+    {
+      "node1": {
+        "hostname": "site-b-host-2",
+        "interfaceName": "eth0"
+      },
+      "node2": {
+        "hostname": "site-b-seg2",
+        "interfaceName": "GigabitEthernet0/3"
+      }
+    },
+    {
+      "node1": {
+        "hostname": "site-b-seg2",
+        "interfaceName": "GigabitEthernet0/3"
+      },
+      "node2": {
+        "hostname": "site-b-host-2",
+        "interfaceName": "eth0"
+      }
+    },
+    {
+      "node1": {
+        "hostname": "site-c-cr-1",
+        "interfaceName": "ge-0/0/2"
+      },
+      "node2": {
+        "hostname": "site-c-seg1",
+        "interfaceName": "GigabitEthernet0/1"
+      }
+    },
+    {
+      "node1": {
+        "hostname": "site-c-seg1",
+        "interfaceName": "GigabitEthernet0/1"
+      },
+      "node2": {
+        "hostname": "site-c-cr-1",
+        "interfaceName": "ge-0/0/2"
+      }
+    },
+    {
+      "node1": {
+        "hostname": "site-c-cr-2",
+        "interfaceName": "ge-0/0/2"
+      },
+      "node2": {
+        "hostname": "site-c-seg1",
+        "interfaceName": "GigabitEthernet0/2"
+      }
+    },
+    {
+      "node1": {
+        "hostname": "site-c-seg1",
+        "interfaceName": "GigabitEthernet0/2"
+      },
+      "node2": {
+        "hostname": "site-c-cr-2",
+        "interfaceName": "ge-0/0/2"
+      }
+    },
+    {
+      "node1": {
+        "hostname": "site-c-host-1",
+        "interfaceName": "eth0"
+      },
+      "node2": {
+        "hostname": "site-c-seg1",
+        "interfaceName": "GigabitEthernet0/3"
+      }
+    },
+    {
+      "node1": {
+        "hostname": "site-c-seg1",
+        "interfaceName": "GigabitEthernet0/3"
+      },
+      "node2": {
+        "hostname": "site-c-host-1",
+        "interfaceName": "eth0"
+      }
+    },
+    {
+      "node1": {
+        "hostname": "site-c-cr-1",
+        "interfaceName": "ge-0/0/3"
+      },
+      "node2": {
+        "hostname": "site-c-seg2",
+        "interfaceName": "GigabitEthernet0/1"
+      }
+    },
+    {
+      "node1": {
+        "hostname": "site-c-seg2",
+        "interfaceName": "GigabitEthernet0/1"
+      },
+      "node2": {
+        "hostname": "site-c-cr-1",
+        "interfaceName": "ge-0/0/3"
+      }
+    },
+    {
+      "node1": {
+        "hostname": "site-c-cr-2",
+        "interfaceName": "ge-0/0/3"
+      },
+      "node2": {
+        "hostname": "site-c-seg2",
+        "interfaceName": "GigabitEthernet0/2"
+      }
+    },
+    {
+      "node1": {
+        "hostname": "site-c-seg2",
+        "interfaceName": "GigabitEthernet0/2"
+      },
+      "node2": {
+        "hostname": "site-c-cr-2",
+        "interfaceName": "ge-0/0/3"
+      }
+    },
+    {
+      "node1": {
+        "hostname": "site-c-host-2",
+        "interfaceName": "eth0"
+      },
+      "node2": {
+        "hostname": "site-c-seg2",
+        "interfaceName": "GigabitEthernet0/3"
+      }
+    },
+    {
+      "node1": {
+        "hostname": "site-c-seg2",
+        "interfaceName": "GigabitEthernet0/3"
+      },
+      "node2": {
+        "hostname": "site-c-host-2",
+        "interfaceName": "eth0"
+      }
     }
   ]
 }
