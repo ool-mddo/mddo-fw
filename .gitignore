@@ -4,6 +4,9 @@
 # Retrieved Junos configurations can contain secret data.
 backups/
 
+# drawio backup files
+*.bkp
+
 # Python-generated files
 __pycache__/
 *.py[cod]
