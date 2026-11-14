@@ -1,6 +1,10 @@
 # mddo-fw
 firewallの要件を含むサンプルconfig
 
+## 構成図
+
+![構成図](mddo-fw-topology.drawio.svg)
+
 ## Junos設定のバックアップ
 
 [`backup_juniper_config.py`](backup_juniper_config.py) は、複数の Juniper Junos 機器へ SSH 接続し、グループ継承を展開した階層形式の設定を一度に保存する単体スクリプトです。
